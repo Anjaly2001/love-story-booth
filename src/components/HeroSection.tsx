@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-rings.jpg";
 
 interface HeroSectionProps {
@@ -57,12 +58,16 @@ const HeroSection = ({ brideName, groomName, weddingDate, isEngaged = false }: H
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <Button variant="default" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant">
-              View Our Gallery
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
-              Our Story
-            </Button>
+            <Link to="/gallery">
+              <Button variant="default" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant">
+                View Our Gallery
+              </Button>
+            </Link>
+            <Link to="/our-story">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
+                Our Story
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
