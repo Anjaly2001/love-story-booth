@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import CountdownTimer from "@/components/CountdownTimer";
+import PhotoGallery from "@/components/PhotoGallery";
 
 const Index = () => {
+  // Sample data - in real app, this would come from database/props
+  const coupleData = {
+    brideName: "Priya",
+    groomName: "Arjun",
+    weddingDate: "2024-12-15", // Format: YYYY-MM-DD
+    isEngaged: true
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection 
+        brideName={coupleData.brideName}
+        groomName={coupleData.groomName}
+        weddingDate={coupleData.weddingDate}
+        isEngaged={coupleData.isEngaged}
+      />
+      
+      {coupleData.isEngaged && (
+        <CountdownTimer weddingDate={coupleData.weddingDate} />
+      )}
+      
+      <PhotoGallery />
     </div>
   );
 };
