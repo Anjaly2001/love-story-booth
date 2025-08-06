@@ -1,16 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Star } from "lucide-react";
 import weddingInvitation from "@/assets/wedding-invitation.jpg";
+import weddingBackground from "@/assets/wedding-background.jpg";
 
 const WeddingInvitation = () => {
   return (
-    <section className="py-16 bg-romantic-gradient">
-      <div className="container mx-auto px-4">
+    <section 
+      className="py-16 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${weddingBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             Our Wedding Invitation
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-white/90 drop-shadow-md">
             You are cordially invited to celebrate our union
           </p>
         </div>

@@ -8,6 +8,7 @@ import WeddingInvitation from "@/components/WeddingInvitation";
 import WeddingVenue from "@/components/WeddingVenue";
 import SaveTheDate from "@/components/SaveTheDate";
 import WeddingLocationMap from "@/components/WeddingLocationMap";
+import weddingBackground from "@/assets/wedding-background.jpg";
 
 const Index = () => {
   // Sample data - in real app, this would come from database/props
@@ -44,13 +45,22 @@ const Index = () => {
       <WeddingLocationMap />
       
       {/* Quick Navigation Cards */}
-      <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
-        <div className="container mx-auto px-4">
+      <section 
+        className="py-16 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${weddingBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
               Explore Our Journey
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto drop-shadow-md">
               Discover the moments that made our love story complete
             </p>
           </div>
