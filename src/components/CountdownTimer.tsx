@@ -44,14 +44,14 @@ const CountdownTimer = ({ weddingDate }: CountdownTimerProps) => {
 
   if (isWeddingDay) {
     return (
-      <section className="py-16 bg-sunset-gradient">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-fade-in">
-            <Heart className="mx-auto text-accent w-16 h-16 mb-6 animate-heart-beat" />
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+            <Heart className="mx-auto text-[#6F4E37] w-16 h-16 mb-6 animate-heart-beat" />
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#6F4E37] mb-4">
               It's Our Wedding Day! 🎉
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-[#6F4E37]/80">
               The wait is over - today we become one!
             </p>
           </div>
@@ -61,14 +61,14 @@ const CountdownTimer = ({ weddingDate }: CountdownTimerProps) => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-secondary/30">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <Calendar className="mx-auto text-primary w-12 h-12 mb-4" />
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+          <Calendar className="mx-auto text-[#6F4E37] w-12 h-12 mb-4" />
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#6F4E37] mb-4">
             Counting Down to Forever
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-[#6F4E37]/80 max-w-2xl mx-auto">
             Every second brings us closer to our perfect day
           </p>
         </div>
@@ -82,13 +82,13 @@ const CountdownTimer = ({ weddingDate }: CountdownTimerProps) => {
           ].map((item, index) => (
             <Card 
               key={item.label} 
-              className="p-6 text-center bg-card/80 backdrop-blur-sm border-primary/20 shadow-elegant animate-fade-in"
+              className="p-6 text-center bg-white border border-[#6F4E37]/20 shadow-md animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2 font-serif">
+              <div className="text-3xl md:text-4xl font-bold text-[#6F4E37] mb-2 font-serif">
                 {item.value.toString().padStart(2, '0')}
               </div>
-              <div className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">
+              <div className="text-sm md:text-base text-[#6F4E37]/70 font-medium uppercase tracking-wider">
                 {item.label}
               </div>
             </Card>
@@ -96,7 +96,7 @@ const CountdownTimer = ({ weddingDate }: CountdownTimerProps) => {
         </div>
 
         <div className="text-center mt-12">
-          <Heart className="inline-block text-accent w-8 h-8 animate-heart-beat" />
+          <Heart className="inline-block text-[#6F4E37] w-8 h-8 animate-heart-beat" />
         </div>
       </div>
     </section>
