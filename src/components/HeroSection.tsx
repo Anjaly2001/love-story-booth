@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-rings.jpg";
+import heroImage from "@/assets/christian-couple.jpg";
+import weddingInvitation from "@/assets/wedding-invitation.jpg";
+import weddingHall from "@/assets/wedding-hall.jpg";
+import saveTheDate from "@/assets/save-the-date.jpg";
 
 interface HeroSectionProps {
   brideName: string;
@@ -27,8 +30,8 @@ const HeroSection = ({ brideName, groomName, weddingDate, isEngaged = false }: H
           <div className="mb-8 animate-fade-in">
             <img 
               src={heroImage} 
-              alt="Wedding rings" 
-              className="mx-auto rounded-2xl shadow-elegant max-w-md w-full animate-romantic-pulse"
+              alt="Christian bride and groom" 
+              className="mx-auto rounded-2xl shadow-elegant max-w-lg w-full animate-romantic-pulse"
             />
           </div>
 

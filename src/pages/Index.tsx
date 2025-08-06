@@ -4,6 +4,10 @@ import { Card } from "@/components/ui/card";
 import { Image, BookOpen, Heart, Calendar } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import CountdownTimer from "@/components/CountdownTimer";
+import WeddingInvitation from "@/components/WeddingInvitation";
+import WeddingVenue from "@/components/WeddingVenue";
+import SaveTheDate from "@/components/SaveTheDate";
+import WeddingLocationMap from "@/components/WeddingLocationMap";
 
 const Index = () => {
   // Sample data - in real app, this would come from database/props
@@ -26,6 +30,18 @@ const Index = () => {
       {coupleData.isEngaged && (
         <CountdownTimer weddingDate={coupleData.weddingDate} />
       )}
+      
+      {/* Wedding Invitation */}
+      <WeddingInvitation />
+
+      {/* Save The Date */}
+      <SaveTheDate />
+
+      {/* Wedding Venue */}
+      <WeddingVenue />
+
+      {/* Wedding Location Map */}
+      <WeddingLocationMap />
       
       {/* Quick Navigation Cards */}
       <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
