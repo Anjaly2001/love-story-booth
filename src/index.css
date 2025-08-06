@@ -2,50 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LoveCapsule Design System - Romantic Wedding Theme
+/* Christian Wedding Design System - Sacred & Traditional Theme
 All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    /* Base romantic color palette */
-    --background: 20 50% 98%;
-    --foreground: 345 30% 15%;
+    /* Base sacred color palette */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 20 60% 97%;
-    --card-foreground: 345 25% 20%;
+    --card: 210 50% 97%;
+    --card-foreground: 215 20% 20%;
 
-    --popover: 20 60% 97%;
-    --popover-foreground: 345 25% 20%;
+    --popover: 210 50% 97%;
+    --popover-foreground: 215 20% 20%;
 
-    /* Primary - Rose Gold */
-    --primary: 15 65% 65%;
-    --primary-foreground: 20 60% 98%;
-    --primary-glow: 15 75% 75%;
+    /* Primary - Sacred Blue */
+    --primary: 215 85% 45%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 215 75% 65%;
 
-    /* Secondary - Soft Blush */
-    --secondary: 350 40% 92%;
-    --secondary-foreground: 345 30% 25%;
+    /* Secondary - Pure White */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 25%;
 
-    /* Muted - Warm Ivory */
-    --muted: 35 25% 94%;
-    --muted-foreground: 345 15% 45%;
+    /* Muted - Soft Ivory */
+    --muted: 45 15% 94%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Accent - Gold */
-    --accent: 45 85% 68%;
-    --accent-foreground: 345 30% 15%;
+    /* Accent - Holy Gold */
+    --accent: 45 90% 55%;
+    --accent-foreground: 215 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 30% 88%;
-    --input: 20 30% 90%;
-    --ring: 15 65% 65%;
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: 215 85% 45%;
 
-    /* Custom romantic tokens */
-    --love-pink: 340 65% 85%;
-    --warm-gold: 45 85% 68%;
-    --soft-cream: 35 30% 95%;
+    /* Custom Christian wedding tokens */
+    --love-pink: 340 45% 85%;
+    --warm-gold: 45 90% 55%;
+    --soft-cream: 45 20% 95%;
     --romantic-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)), hsl(var(--accent)));
     --sunset-gradient: linear-gradient(180deg, hsl(var(--love-pink)), hsl(var(--primary)), hsl(var(--warm-gold)));
     --elegant-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.25);
