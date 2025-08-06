@@ -5,6 +5,7 @@ import heroImage from "@/assets/christian-couple.jpg";
 import weddingInvitation from "@/assets/wedding-invitation.jpg";
 import weddingHall from "@/assets/wedding-hall.jpg";
 import saveTheDate from "@/assets/save-the-date.jpg";
+import weddingBackground from "@/assets/wedding-background.jpg";
 
 interface HeroSectionProps {
   brideName: string;
@@ -15,7 +16,17 @@ interface HeroSectionProps {
 
 const HeroSection = ({ brideName, groomName, weddingDate, isEngaged = false }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-romantic-gradient overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${weddingBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
       {/* Floating hearts animation */}
       <div className="absolute inset-0 pointer-events-none">
         <Heart className="absolute top-20 left-10 text-primary/20 w-6 h-6 animate-float" style={{ animationDelay: '0s' }} />
@@ -36,24 +47,24 @@ const HeroSection = ({ brideName, groomName, weddingDate, isEngaged = false }: H
           </div>
 
           {/* Main heading */}
-          <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="text-primary">{brideName}</span>
-            <Heart className="inline-block mx-4 text-accent animate-heart-beat w-12 h-12 md:w-16 md:h-16" />
-            <span className="text-primary">{groomName}</span>
+          <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 animate-fade-in text-white drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
+            <span className="text-white">{brideName}</span>
+            <Heart className="inline-block mx-4 text-accent animate-heart-beat w-12 h-12 md:w-16 md:h-16 drop-shadow-lg" />
+            <span className="text-white">{groomName}</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-sans animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 font-sans animate-fade-in drop-shadow-md" style={{ animationDelay: '0.4s' }}>
             {isEngaged ? "Our Love Story Continues..." : "Forever Begins Here"}
           </p>
 
           {/* Wedding Date */}
           {weddingDate && (
             <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <p className="text-lg text-muted-foreground mb-2">
+              <p className="text-lg text-white/80 mb-2 drop-shadow-md">
                 {isEngaged ? "Getting married on" : "Married on"}
               </p>
-              <p className="font-serif text-3xl md:text-4xl text-accent font-semibold">
+              <p className="font-serif text-3xl md:text-4xl text-accent font-semibold drop-shadow-lg">
                 {weddingDate}
               </p>
             </div>
